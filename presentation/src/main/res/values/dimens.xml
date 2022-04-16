@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="constraint_match_parent">0dp</dimen>
+
+    <!-- paddings -->
+    <dimen name="padding_extra_tiny">2dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium_small">12dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+
+
+    <!-- margins -->
+    <dimen name="margin_extra_tiny">2dp</dimen>
+    <dimen name="margin_tiny">4dp</dimen>
+    <dimen name="margin_extra_small">6dp</dimen>
+    <dimen name="margin_very_small">8dp</dimen>
+    <dimen name="margin_small">10dp</dimen>
+    <dimen name="margin_medium_small">12dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_medium_plus">20dp</dimen>
+    <dimen name="margin_medium_big">24dp</dimen>
+    <dimen name="margin_medium_bigger">28dp</dimen>
+    <dimen name="margin_very_large">50dp</dimen>
+    <dimen name="task_title_margin_end">52dp</dimen>
+    <dimen name="collapsing_toolbar_margin_start">60dp</dimen>
+
+    <!-- icon sizes -->
+    <dimen name="icon_size_small">24dp</dimen>
+
+    <dimen name="fab_size">56dp</dimen>
+
+    <!-- corners radius -->
+    <dimen name="corner_radius">8dp</dimen>
+
+    <!-- elevation -->
+    <dimen name="elevation_zero">0dp</dimen>
+    <dimen name="elevation_tiny">2dp</dimen>
+
+    <dimen name="switch_track_width">50dp</dimen>
+    <dimen name="zero_size">0dp</dimen>
+
+</resources>

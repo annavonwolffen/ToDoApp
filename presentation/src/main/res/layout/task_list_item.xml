@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.annevonwolffen.todoapp.R" />
+        <import type="com.annevonwolffen.domain.Priority" />
+
+        <variable
+            name="task"
+            type="com.annevonwolffen.todoapp.model.TaskPresentationModel" />
+
+        <variable
+            name="clickHandler"
+            type="com.annevonwolffen.todoapp.OnTaskClickListener" />
+
+        <variable
+            name="doneHandler"
+            type="com.annevonwolffen.todoapp.TaskItemActionListener" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_item_background"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="@{() -> clickHandler.onClickTask(task)}"
+        android:paddingStart="@dimen/padding_medium"
+        android:paddingTop="@dimen/padding_medium_small"
+        android:paddingEnd="@dimen/padding_medium"
+        android:paddingBottom="@dimen/padding_medium_small">
+
+        <CheckBox
+            android:id="@+id/done_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@{task.priority == Priority.HIGH ? @colorStateList/checkbox_tint_accent : @colorStateList/checkbox_tint}"
+            android:checked="@{task.done}"
+            android:minWidth="@dimen/zero_size"
+            android:minHeight="@dimen/zero_size"
+            android:onClick="@{() -> doneHandler.onDoneTask(task)}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/priority_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium_small"
+            android:src="@{task.priority == Priority.HIGH ? @drawable/ic_priority_high_16dp : @drawable/ic_priority_low_16dp}"
+            app:layout_constraintStart_toEndOf="@+id/done_checkbox"
+            app:layout_constraintTop_toTopOf="@+id/task_title"
+            app:visibility="@{task.priority == Priority.HIGH || task.priority == Priority.LOW}"
+            tools:src="@drawable/ic_priority_high_16dp"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/task_title"
+            android:layout_width="@dimen/constraint_match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_extra_tiny"
+            android:layout_marginEnd="@dimen/task_title_margin_end"
+            android:layout_marginBottom="@dimen/margin_extra_tiny"
+            android:layout_marginStart="@dimen/margin_tiny"
+            app:layout_goneMarginStart="@dimen/margin_medium_small"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:text="@{task.title}"
+            android:textAppearance="@{task.done ? R.style.TextAppearance_ToDoApp_Body_Tertiary : R.style.TextAppearance_ToDoApp_Body}"
+            app:isCrossedOut="@{task.done}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/priority_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Купить что-то, где-то, зачем-то, но зачем не очень понятно, но точно чтобы показать как обрезается в три точки в конце при достижении текста длины больше трех строк" />
+
+        <TextView
+            android:id="@+id/date_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_extra_tiny"
+            android:layout_marginBottom="@dimen/margin_extra_tiny"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.ToDoApp.Subhead.Tertiary"
+            app:layout_constraintStart_toStartOf="@+id/task_title"
+            app:layout_constraintTop_toBottomOf="@+id/task_title"
+            app:stringFromDate="@{task.deadline}"
+            app:visibility="@{task.deadline != null}"
+            tools:text="27 июня 2021"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:layout_width="@dimen/icon_size_small"
+            android:layout_height="@dimen/icon_size_small"
+            android:onClick="@{() -> clickHandler.onClickTask(task)}"
+            android:src="@drawable/ic_info_outline_24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/colorTertiary" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

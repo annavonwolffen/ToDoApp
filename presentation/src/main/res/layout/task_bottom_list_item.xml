@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="task"
+            type="com.annevonwolffen.todoapp.model.TaskPresentationModel" />
+
+        <variable
+            name="clickHandler"
+            type="com.annevonwolffen.todoapp.OnTaskClickListener" />
+
+        <variable
+            name="doneHandler"
+            type="com.annevonwolffen.todoapp.TaskItemActionListener" />
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_medium_small"
+        android:background="@drawable/bottom_item_list_background"
+        android:elevation="@dimen/elevation_tiny"
+        android:paddingBottom="@dimen/padding_small">
+
+        <include
+            layout="@layout/task_list_item"
+            app:clickHandler="@{clickHandler}"
+            app:doneHandler="@{doneHandler}"
+            app:task="@{task}" />
+
+    </FrameLayout>
+</layout>

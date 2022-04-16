@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.ToDoApp.TitleLarge" parent="@style/TextAppearance.AppCompat.Title">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="lineHeight">37.5sp</item>
+    </style>
+
+    <style name="TextAppearance.ToDoApp.Title" parent="@style/TextAppearance.AppCompat.Title">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:letterSpacing">0.5</item>
+        <item name="lineHeight">32sp</item>
+    </style>
+
+    <style name="TextAppearance.ToDoApp.Button" parent="@style/TextAppearance.AppCompat.Button">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="lineHeight">24sp</item>
+        <item name="android:letterSpacing">0.16</item>
+    </style>
+
+    <style name="TextAppearance.ToDoApp.Body" parent="@style/TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+
+    <style name="TextAppearance.ToDoApp.Body.Tertiary" parent="@style/TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorTertiary</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+
+    <style name="TextAppearance.ToDoApp.Body.Disabled" parent="@style/TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorDisabled</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+
+    <style name="TextAppearance.ToDoApp.Body.Accent" parent="@style/TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorRed</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+
+    <style name="TextAppearance.ToDoApp.Subhead" parent="@style/TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+
+    <style name="TextAppearance.ToDoApp.Subhead.Tertiary" parent="@style/TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorTertiary</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+</resources>

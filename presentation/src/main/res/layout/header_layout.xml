@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.annevonwolffen.todoapp.TasksViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackground"
+        android:paddingTop="?attr/actionBarSize">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/collapsing_toolbar_margin_start"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/main_page_title"
+            android:textAppearance="@style/TextAppearance.ToDoApp.TitleLarge"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/done_tasks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_extra_small"
+            android:text="@{@string/done_title(viewModel.doneTasksCount)}"
+            android:textAppearance="@style/TextAppearance.ToDoApp.Body.Tertiary"
+            app:layout_constraintStart_toStartOf="@+id/title"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <ImageView
+            android:layout_width="@dimen/icon_size_small"
+            android:layout_height="@dimen/icon_size_small"
+            android:layout_marginEnd="@dimen/margin_medium_big"
+            android:onClick="@{() -> viewModel.onDoneTasksToggleClick()}"
+            android:src="@{viewModel.isDoneTasksShown ? @drawable/ic_visibility_off_24dp : @drawable/ic_visibility_24dp}"
+            app:layout_constraintBottom_toBottomOf="@+id/done_tasks"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/done_tasks"
+            app:tint="@color/colorBlue" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

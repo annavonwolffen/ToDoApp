@@ -1,0 +1,62 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.ToDoApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorBackground</item>
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="toolbarStyle">@style/Widget.ToDoApp.Toolbar</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/colorTransparent</item>
+        <item name="actionMenuTextAppearance">@style/TextAppearance.ToDoApp.Button</item>
+        <item name="actionMenuTextColor">@color/colorBlue</item>
+        <item name="editTextStyle">@style/Widget.ToDoApp.EditText</item>
+        <item name="popupMenuStyle">@style/Widget.ToDoApp.PopupMenu</item>
+    </style>
+
+    <style name="Theme.ToDoApp.AppBarLayout">
+        <item name="backgroundColor">@color/colorBackground</item>
+    </style>
+
+    <style name="Widget.ToDoApp.Toolbar" parent="@style/Widget.AppCompat.Toolbar">
+        <item name="titleTextAppearance">@style/TextAppearance.ToDoApp.Title</item>
+        <item name="titleTextColor">@color/colorBlack</item>
+        <item name="colorControlNormal">@color/colorBlack</item>
+        <item name="backgroundColor">@color/colorBackground</item>
+    </style>
+
+    <style name="Widget.ToDoApp.EditText" parent="@style/Widget.AppCompat.EditText">
+        <item name="hintTextColor">@color/colorTertiary</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:textCursorDrawable">@null</item>
+    </style>
+
+    <style name="Widget.ToDoApp.PopupMenu" parent="@style/Widget.AppCompat.PopupMenu">
+        <item name="android:overlapAnchor">true</item>
+        <item name="android:dropDownVerticalOffset">0dp</item>
+    </style>
+
+    <style name="Widget.ToDoApp.Switch" parent="Widget.AppCompat.CompoundButton.Switch">
+        <item name="colorControlActivated">@color/colorBlue</item>
+        <item name="colorSwitchThumbNormal">@color/colorWhite</item>
+        <item name="android:colorForeground">@color/colorOverlay</item>
+        <item name="switchMinWidth">@dimen/switch_track_width</item>
+    </style>
+
+    <style name="Theme.TodoApp.DatePickerDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/colorBlue</item>
+        <item name="android:buttonBarPositiveButtonStyle">
+            @style/Theme.TodoApp.Alert.Button.Positive
+        </item>
+        <item name="android:buttonBarNegativeButtonStyle">
+            @style/Theme.TodoApp.Alert.Button.Negative
+        </item>
+    </style>
+
+    <style name="Theme.TodoApp.Alert.Button.Positive" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textAppearance">@style/TextAppearance.ToDoApp.Button</item>
+        <item name="android:textColor">@color/colorBlue</item>
+    </style>
+
+    <style name="Theme.TodoApp.Alert.Button.Negative" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textAppearance">@style/TextAppearance.ToDoApp.Button</item>
+        <item name="android:textColor">@color/colorBlue</item>
+    </style>
+</resources>

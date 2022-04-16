@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Сделать</string>
+    <string name="main_page_title">Мои дела</string>
+    <string name="done_title">Выполнено — %1$d</string>
+    <string name="show_done">Показать выполненные</string>
+    <string name="hide_done">Скрыть выполненные</string>
+    <string name="save">Сохранить</string>
+    <string name="add_task_edit_text_hint">Что надо сделать…</string>
+    <string name="importance">Важность</string>
+    <string name="importance_none">Нет</string>
+    <string name="importance_low">Низкий</string>
+    <string name="importance_high">!! Высокий</string>
+    <string name="deadline_label">Сделать до</string>
+    <string name="delete">Удалить</string>
+    <string name="deadline_date_format">%1$d %2$s %3$d</string>
+    <string name="notification_title">Сегодня вам нужно сделать %1$s</string>
+    <string name="notification_text">Не забудьте!</string>
+
+    <string-array name="months_genitive">
+        <item>"января"</item>
+        <item>"февраля"</item>
+        <item>"марта"</item>
+        <item>"апреля"</item>
+        <item>"мая"</item>
+        <item>"июня"</item>
+        <item>"июля"</item>
+        <item>"августа"</item>
+        <item>"сентября"</item>
+        <item>"октября"</item>
+        <item>"ноября"</item>
+        <item>"декабря"</item>
+    </string-array>
+
+    <plurals name="notification_task_count">
+        <item quantity="zero">%d&#160;задач</item>
+        <item quantity="one">%d&#160;задачу</item>
+        <item quantity="two">%d&#160;задачи</item>
+        <item quantity="few">%d&#160;задачи</item>
+        <item quantity="many">%d&#160;задач</item>
+        <item quantity="other">%d&#160;задач</item>
+    </plurals>
+</resources>
